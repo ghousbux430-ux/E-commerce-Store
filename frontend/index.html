@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ZAVORA | Online Store</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- <link rel="stylesheet" href="css/products.css" /> -->
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar-content">
+          <span>
+            <i class="bi bi-truck"></i>
+            Free delivery on orders over $50
+          </span>
+
+          <span class="welcome-text"> Welcome to ZAVORA Online Store </span>
+
+          <span>
+            <i class="bi bi-headset"></i>
+            Need help? +92 309 3223281
+          </span>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg main-navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand logo" href="index.html">
+          <div class="logo-icon">
+            <i class="bi bi-bag-heart-fill"></i>
+          </div>
+
+          <div class="logo-text">
+            <span class="store-name">ZAVORA</span>
+            <small>Online Store</small>
+          </div>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="products.html" id="shopLink">Shop</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"> About Us </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+          </ul>
+
+          <!-- Search -->
+          <div class="search-box">
+            <input
+              type="text"
+              id="homeSearch"
+              placeholder="Search products..."
+            />
+
+            <button type="button" id="searchBtn">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+
+          <!-- Navbar Icons -->
+          <div class="navbar-actions">
+            <a href="login.html" class="action-icon">
+              <i class="bi bi-person"></i>
+            </a>
+
+            <a href="wishlist.html" class="action-icon">
+              <i class="bi bi-heart"></i>
+            </a>
+
+            <a href="cart.html" class="action-icon cart-icon">
+              <i class="bi bi-cart3"></i>
+
+              <span class="cart-count" id="cartCount"> 0 </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Hero Content -->
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <span class="hero-tag">
+                <i class="bi bi-stars"></i>
+                NEW COLLECTION 2026
+              </span>
+
+              <h1>
+                Everything You Need,
+                <span>All in One Place.</span>
+              </h1>
+
+              <p>
+                Discover quality products at great prices. Shop the latest
+                trends, electronics, fashion and more with fast and secure
+                delivery.
+              </p>
+
+              <!-- Hero Buttons -->
+              <div class="hero-buttons">
+                <a href="products.html" class="btn-secondary-custom">
+                  Shop Now
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+
+                <a href="products.html" class="btn-secondary-custom">
+                  Explore Deals
+                </a>
+              </div>
+
+              <!-- Hero Features -->
+              <div class="hero-features">
+                <div class="hero-feature">
+                  <div class="feature-icon">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+
+                  <div>
+                    <strong>Secure Payment</strong>
+                    <small>100% protected</small>
+                  </div>
+                </div>
+
+                <div class="hero-feature">
+                  <div class="feature-icon">
+                    <i class="bi bi-truck"></i>
+                  </div>
+
+                  <div>
+                    <strong>Fast Delivery</strong>
+                    <small>Quick & reliable</small>
+                  </div>
+                </div>
+
+                <div class="hero-feature">
+                  <div class="feature-icon">
+                    <i class="bi bi-arrow-repeat"></i>
+                  </div>
+
+                  <div>
+                    <strong>Easy Returns</strong>
+                    <small>30-day returns</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="col-lg-6">
+            <div class="hero-image-container">
+              <div class="hero-circle"></div>
+
+              <img
+                src="assests/download (1).jpg"
+                alt="ShopEase Products"
+                class="hero-image"
+              />
+
+              <!-- Floating Card -->
+              <div class="hero-floating-card">
+                <div class="floating-icon">
+                  <i class="bi bi-bag-check-fill"></i>
+                </div>
+
+                <div class="text">
+                  <strong>50% OFF</strong>
+                  <small>Selected Products</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-label"> EXPLORE </span>
+
+            <h2>Shop by Category</h2>
+          </div>
+
+          <a href="products.html" class="view-all">
+            View All
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Electronics -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="products.html?category=electronics" class="category-card">
+              <div class="category-icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+
+              <h5>Electronics</h5>
+
+              <span>10+ Products</span>
+            </a>
+          </div>
+
+          <!-- Fashion -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="products.html?category=fashion" class="category-card">
+              <div class="category-icon">
+                <i class="bi bi-handbag"></i>
+              </div>
+
+              <h5>Fashion</h5>
+
+              <span>5+ Products</span>
+            </a>
+          </div>
+
+          <!-- Home -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="products.html?category=home" class="category-card">
+              <div class="category-icon">
+                <i class="bi bi-house"></i>
+              </div>
+
+              <h5>Home & Living</h5>
+
+              <span>7+ Products</span>
+            </a>
+          </div>
+
+          <!-- Beauty -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="products.html?category=beauty" class="category-card">
+              <div class="category-icon">
+                <i class="bi bi-droplet"></i>
+              </div>
+
+              <h5>Beauty</h5>
+
+              <span>5+ Products</span>
+            </a>
+          </div>
+
+          <!-- Sports -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="products.html?category=sports" class="category-card">
+              <div class="category-icon">
+                <i class="bi bi-dribbble"></i>
+              </div>
+
+              <h5>Sports</h5>
+
+              <span>6+ Products</span>
+            </a>
+          </div>
+
+          <!-- Books -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="products.html?category=books" class="category-card">
+              <div class="category-icon">
+                <i class="bi bi-book"></i>
+              </div>
+
+              <h5>Books</h5>
+
+              <span>3+ Products</span>
+            </a>
+          </div>
+
+          <!-- Toys -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="products.html?category=toys" class="category-card">
+              <div class="category-icon">
+                <i class="bi bi-controller"></i>
+              </div>
+
+              <h5>Toys & Games</h5>
+
+              <span>7+ Products</span>
+            </a>
+          </div>
+
+          <!-- More -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="products.html" class="category-card more-category">
+              <div class="category-icon">
+                <i class="bi bi-grid"></i>
+              </div>
+
+              <h5>View More</h5>
+
+              <span>Explore Everything</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="container">
+        <div class="services-wrapper">
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="bi bi-truck"></i>
+            </div>
+
+            <div>
+              <h6>Free Shipping</h6>
+              <p>On orders over $50</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="bi bi-headset"></i>
+            </div>
+
+            <div>
+              <h6>24/7 Support</h6>
+              <p>We're here to help</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="bi bi-shield-check"></i>
+            </div>
+
+            <div>
+              <h6>Secure Payments</h6>
+              <p>100% secure checkout</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="bi bi-tag"></i>
+            </div>
+
+            <div>
+              <h6>Best Prices</h6>
+              <p>Great deals every day</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-label"> HAND PICKED </span>
+
+            <h2>Featured Products</h2>
+          </div>
+
+          <a href="products.html" class="view-all">
+            View All
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Product Container -->
+        <div class="row g-4" id="featuredProducts">
+          <!--
+                    Products will be loaded here
+                    using JavaScript / Backend API.
+                -->
+        </div>
+      </div>
+    </section>
+
+    <section class="new-arrivals-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-label"> JUST LANDED </span>
+
+            <h2>New Arrivals</h2>
+          </div>
+
+          <a href="products.html" class="view-all">
+            View All
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="row g-4" id="newArrivals">
+          <!--
+                    New arrival products
+                    will be loaded using JavaScript.
+                -->
+        </div>
+      </div>
+    </section>
+
+    <section class="offer-section">
+      <div class="container">
+        <div class="offer-banner">
+          <div class="offer-content">
+            <span> LIMITED TIME OFFER </span>
+
+            <h2>
+              Big Savings.
+              <br />
+              Bigger Smiles.
+            </h2>
+
+            <p>
+              Get amazing discounts on selected products. Don't miss today's
+              special deals.
+            </p>
+          </div>
+
+          <div class="offer-image">
+            <img src="assests/image.png" alt="Special Offers" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-content">
+          <div>
+            <span class="section-label"> STAY UPDATED </span>
+
+            <h2>Get the Latest Deals</h2>
+
+            <p>Subscribe to our newsletter and never miss a special offer.</p>
+          </div>
+
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-5">
+          <!-- About -->
+          <div class="col-lg-4">
+            <a href="index.html" class="footer-logo">
+              <div class="logo-icon">
+                <i class="bi bi-bag-heart-fill"></i>
+              </div>
+
+              <div>
+                <strong>ZAVORA</strong>
+                <small>Online Store</small>
+              </div>
+            </a>
+
+            <p class="footer-description">
+              Your trusted online shopping destination for quality products,
+              great prices and reliable service.
+            </p>
+
+            <div class="social-links">
+              <a href="#">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="#">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+
+              <a href="#">
+                <i class="bi bi-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-6 col-lg-2">
+            <h5>Quick Links</h5>
+
+            <ul class="footer-links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="products.html">Shop</a>
+              </li>
+
+              <li>
+                <a href="products.html">Categories</a>
+              </li>
+
+              <li>
+                <a href="products.html">Deals</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Customer Service -->
+          <div class="col-6 col-lg-2">
+            <h5>Customer Service</h5>
+
+            <ul class="footer-links">
+              <li>
+                <a href="contact.html">Contact Us</a>
+              </li>
+
+              <li>
+                <a href="#">Shipping</a>
+              </li>
+
+              <li>
+                <a href="#">Returns</a>
+              </li>
+
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Account -->
+          <div class="col-6 col-lg-2">
+            <h5>My Account</h5>
+
+            <ul class="footer-links">
+              <li>
+                <a href="login.html">Login</a>
+              </li>
+
+              <li>
+                <a href="register.html">Register</a>
+              </li>
+
+              <li>
+                <a href="profile.html">My Profile</a>
+              </li>
+
+              <li>
+                <a href="cart.html">My Cart</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-6 col-lg-2">
+            <h5>Contact</h5>
+
+            <ul class="footer-contact">
+              <li>
+                <i class="bi bi-telephone"></i>
+                +1 234 567 890
+              </li>
+
+              <li>
+                <i class="bi bi-envelope"></i>
+                support@shopease.com
+              </li>
+
+              <li>
+                <i class="bi bi-geo-alt"></i>
+                123 Main Street
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+          <p>© 2026 ZAVORA. All rights reserved.</p>
+
+          <div>
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+    <!-- <script src="js/products.js"></script> -->
+  </body>
+</html>

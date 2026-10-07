@@ -1,0 +1,1652 @@
+/* ========================================
+   BUXMART LOGIN PAGE
+======================================== */
+
+:root {
+    --navy: #111a2d;
+    --navy-light: #18233a;
+
+    --orange: #ff7200;
+    --orange-dark: #e96500;
+
+    --blue: #2167e8;
+    --blue-dark: #1858cf;
+
+    --white: #ffffff;
+
+    --light-bg: #f8f9fb;
+
+    --text-dark: #1c1f26;
+    --text: #424750;
+    --text-muted: #777e89;
+
+    --border: #e5e7eb;
+
+    --success: #198754;
+
+    --shadow:
+        0 15px 45px rgba(17, 26, 45, 0.10);
+}
+
+
+/* ========================================
+   GLOBAL RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background: #ffffff;
+
+    color: var(--text-dark);
+
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+.top-bar {
+    background: #ffffff;
+    color: #101a2f;
+    font-size: 13px;
+    padding-top: 0px;
+}
+
+.top-bar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.top-bar i {
+    margin-right: 6px;
+}
+
+.welcome-text {
+    font-weight: 700;
+}
+
+
+.top-bar {
+    background: #ffffff;
+    color: #101a2f;
+    font-size: 13px;
+    padding-top: 0px;
+}
+
+.top-bar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.top-bar i {
+    margin-right: 6px;
+}
+
+.welcome-text {
+    font-weight: 700;
+}
+
+/* ========================================
+   BUXMART NAVBAR
+   SAME AS HOME PAGE
+======================================== */
+
+.main-navbar {
+    background: #101a2f;
+
+    min-height: 84px;
+
+    color: white;
+
+    border-bottom: 3px solid #edf0f5;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px;
+
+    background: #2167e8;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 8px 20px rgba(33, 103, 232, 0.20);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+    transform: translateY(-2px);
+
+    background: #1858cf;
+}
+
+
+.logo-text {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.1;
+}
+
+
+.store-name {
+    font-size: 23px;
+
+    font-weight: 750;
+
+    color: #FF6B00;
+}
+
+
+.logo-text small {
+    font-size: 11px;
+
+    color: #7b8495;
+
+    margin-top: 3px;
+}
+
+
+/* ========================================
+   NAVIGATION LINKS
+======================================== */
+
+.navbar-nav {
+    gap: 5px;
+}
+
+
+.nav-link {
+    color: white !important;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    padding: 10px 10px !important;
+
+    position: relative;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.nav-link:hover {
+    color: #2167e8 !important;
+}
+
+
+.nav-link.active {
+    color: #FF6B00 !important;
+}
+
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 9px;
+
+    right: 9px;
+
+    bottom: 0;
+
+    height: 3px;
+
+    border-radius: 10px 10px 0 0;
+
+    background: #2167e8;
+}
+
+
+/* ========================================
+   SEARCH BOX
+======================================== */
+
+.search-box {
+    width: 245px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #e3e7ee;
+
+    border-radius: 25px;
+
+    background: #fafbfc;
+
+    margin-left: 15px;
+
+    transition:
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.search-box:focus-within {
+    border: 2px solid #FF6B00;
+
+    box-shadow:
+        0 0 0 2px #FF6B00;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 0 8px 0 17px;
+
+    font-size: 13px;
+
+    color: #172033;
+}
+
+
+.search-box input::placeholder {
+    color: #9aa2b1;
+}
+
+
+.search-box button {
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #273449;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+}
+
+
+.search-box button:hover {
+    color: #FF6B00;
+}
+
+
+/* ========================================
+   NAVBAR ACTIONS
+======================================== */
+
+.navbar-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-left: 14px;
+}
+
+
+.action-icon {
+    width: 39px;
+
+    height: 39px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 20px;
+
+    position: relative;
+
+    transition:
+        0.3s ease;
+}
+
+
+.action-icon:hover {
+    background: #FF6B00;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* Login / Account active */
+
+/* .action-icon.active-action {
+    background: #FF6B00;
+
+    color: white;
+} */
+
+
+/* ========================================
+   CART COUNT
+======================================== */
+
+.cart-count {
+    position: absolute;
+
+    top: -3px;
+
+    right: -2px;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #2167e8;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* ========================================
+   MOBILE NAVBAR TOGGLE
+======================================== */
+
+.navbar-toggler {
+    border: none;
+
+    outline: none;
+
+    box-shadow: none !important;
+
+    font-size: 26px;
+
+    color: #ffffff;
+}
+
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+
+.navbar-toggler:hover {
+    color: #FF6B00;
+}
+
+
+/* ========================================
+   LOGIN SECTION
+======================================== */
+
+.login-section {
+    min-height: calc(100vh - 84px);
+
+    padding-top: 75px;
+
+    padding-bottom: 70px;
+
+    background:
+
+        radial-gradient(
+            circle at 8% 25%,
+            rgba(255, 114, 0, 0.055),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 92% 75%,
+            rgba(36, 104, 232, 0.045),
+            transparent 25%
+        ),
+
+        #ffffff;
+}
+
+
+/* ========================================
+   LOGIN WRAPPER
+======================================== */
+
+.login-wrapper {
+    min-height: 620px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(390px, 0.9fr);
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* ========================================
+   LEFT INFORMATION
+======================================== */
+
+.login-info {
+    padding: 20px 10px;
+
+    animation:
+        fadeInLeft 0.7s ease both;
+}
+
+
+/* ========================================
+   WELCOME BADGE
+======================================== */
+
+.welcome-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 15px;
+
+    border-radius: 50px;
+
+    background:rgba(0, 0, 0, 0);
+
+    border: 2px solid #c7e6ff;
+
+    color: var(--orange);
+
+    font-size: 0.80rem;
+
+    font-weight: 800;
+
+    margin-bottom: 23px;
+}
+
+
+.welcome-badge i {
+    font-size: 0.95rem;
+}
+
+
+/* ========================================
+   LEFT HEADING
+======================================== */
+
+.login-info h1 {
+    margin: 0 0 20px;
+
+    color: var(--text-dark);
+
+    font-size:
+        clamp(2.8rem, 5vw, 4.5rem);
+
+    line-height: 1.03;
+
+    letter-spacing: -2px;
+
+    font-weight: 800;
+}
+
+
+.login-info h1 span {
+    color: var(--orange);
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.info-description {
+    max-width: 580px;
+
+    margin-bottom: 38px;
+
+    color: var(--text-muted);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   FEATURES
+======================================== */
+
+.login-features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 21px;
+}
+
+
+.feature-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.feature-icon {
+    width: 49px;
+
+    height: 49px;
+
+    min-width: 49px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #fff6ee;
+
+    border: 1px solid #ffe4d0;
+
+    color: var(--orange);
+
+    font-size: 1.15rem;
+}
+
+
+.feature-item h6 {
+    margin: 0 0 4px;
+
+    color: var(--text-dark);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+}
+
+
+.feature-item p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 0.82rem;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   LOGIN CARD
+======================================== */
+
+.login-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+
+    padding: 34px;
+
+    box-shadow: var(--shadow);
+
+    animation:
+        fadeInRight 0.7s ease both;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.login-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 20px 55px rgba(17, 26, 45, 0.13);
+}
+
+
+/* ========================================
+   LOGIN CARD HEADER
+======================================== */
+
+.login-header {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+
+.login-icon {
+    width: 58px;
+
+    height: 58px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #fff5ec;
+
+    border: 1px solid #ffe1cb;
+
+    color: var(--orange);
+
+    font-size: 1.35rem;
+}
+
+
+.login-header h2 {
+    margin: 0 0 7px;
+
+    color: var(--text-dark);
+
+    font-size: 1.65rem;
+
+    font-weight: 800;
+}
+
+
+.login-header p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 0.86rem;
+}
+
+
+/* ========================================
+   FORM GROUP
+======================================== */
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--text-dark);
+
+    font-size: 0.84rem;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   PASSWORD LABEL
+======================================== */
+
+.password-label {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+.password-label a {
+    color: var(--orange);
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+
+.password-label a:hover {
+    color: var(--orange-dark);
+
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   INPUT WRAPPER
+======================================== */
+
+.input-wrapper {
+    position: relative;
+}
+
+
+.input-wrapper > i {
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #9299a3;
+
+    font-size: 0.95rem;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    transition: color 0.2s ease;
+}
+
+
+/* ========================================
+   INPUT
+======================================== */
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 50px;
+
+    padding:
+        0 45px
+        0 43px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: var(--text-dark);
+
+    font-size: 0.86rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.input-wrapper input::placeholder {
+    color: #a0a5ad;
+}
+
+
+.input-wrapper input:focus {
+    border-color: var(--orange);
+
+    box-shadow:
+        0 0 0 4px rgba(255, 114, 0, 0.09);
+}
+
+
+.input-wrapper:focus-within > i {
+    color: var(--orange);
+}
+
+
+/* ========================================
+   PASSWORD TOGGLE
+======================================== */
+
+.password-toggle {
+    position: absolute;
+
+    top: 50%;
+
+    right: 8px;
+
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #8d939d;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.password-toggle:hover {
+    color: var(--orange);
+
+    background: #fff5ec;
+}
+
+
+/* ========================================
+   REMEMBER ME
+======================================== */
+
+.remember-row {
+    margin: 2px 0 20px;
+}
+
+
+.remember-label {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 0 !important;
+
+    color: var(--text-muted) !important;
+
+    font-size: 0.80rem !important;
+
+    font-weight: 500 !important;
+
+    cursor: pointer;
+}
+
+
+.remember-label input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.custom-checkbox {
+    width: 17px;
+
+    height: 17px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid #cfd3d9;
+
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.remember-label input:checked + .custom-checkbox {
+    background: var(--orange);
+
+    border-color: var(--orange);
+}
+
+
+.remember-label input:checked + .custom-checkbox::after {
+    content: "✓";
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+/* ========================================
+   SIGN IN BUTTON
+======================================== */
+
+.signin-btn {
+    width: 100%;
+
+    height: 51px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background: var(--orange);
+
+    color: #ffffff;
+
+    font-size: 0.88rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(255, 114, 0, 0.18);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.signin-btn:hover {
+    background: var(--orange-dark);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(255, 114, 0, 0.24);
+}
+
+
+.signin-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   DIVIDER
+======================================== */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 23px 0 18px;
+
+    color: #a0a5ad;
+
+    font-size: 0.67rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--border);
+}
+
+
+/* ========================================
+   GOOGLE BUTTON
+======================================== */
+
+.google-btn {
+    width: 100%;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.google-btn:hover {
+    background: #f8f9fb;
+
+    border-color: #d2d6dc;
+
+    transform: translateY(-1px);
+}
+
+
+.google-icon {
+    width: 25px;
+
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #4285f4;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+}
+
+
+/* ========================================
+   REGISTER
+======================================== */
+
+.register-text {
+    text-align: center;
+
+    margin-top: 21px;
+
+    color: var(--text-muted);
+
+    font-size: 0.80rem;
+}
+
+
+.register-text a {
+    color: var(--orange);
+
+    font-weight: 700;
+
+    margin-left: 3px;
+
+    transition: color 0.2s ease;
+}
+
+
+.register-text a:hover {
+    color: var(--orange-dark);
+
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   BACK HOME
+======================================== */
+
+.back-home {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 21px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #eeeeef;
+
+    color: #737984;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
+
+.back-home:hover {
+    color: var(--orange);
+
+    gap: 10px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.login-footer {
+    background: #fafafa;
+
+    border-top: 1px solid #eeeeef;
+
+    padding: 22px 0;
+}
+
+
+.footer-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.footer-content p {
+    margin: 0;
+
+    color: #8b919a;
+
+    font-size: 0.75rem;
+}
+
+
+.footer-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.footer-links a {
+    color: #777e88;
+
+    font-size: 0.75rem;
+
+    transition: color 0.2s ease;
+}
+
+
+.footer-links a:hover {
+    color: var(--orange);
+}
+
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes fadeInLeft {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes fadeInRight {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+
+
+/* ========================================
+   LARGE TABLET
+======================================== */
+
+@media (max-width: 1199px) {
+
+    .search-box {
+        width: 190px;
+    }
+
+    .nav-link {
+        padding-left: 8px !important;
+
+        padding-right: 8px !important;
+    }
+
+    .navbar-actions {
+        margin-left: 5px;
+    }
+
+    .login-wrapper {
+        gap: 45px;
+    }
+
+    .login-info h1 {
+        font-size: 3.4rem;
+    }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 991px) {
+
+    /* Navbar */
+
+    .main-navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-collapse {
+        padding-top: 15px;
+    }
+
+    .navbar-nav {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 11px 5px !important;
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+    .search-box {
+        width: 100%;
+
+        margin: 12px 0;
+    }
+
+    .navbar-actions {
+        justify-content: center;
+
+        margin: 8px 0 0;
+    }
+
+
+    /* Login */
+
+    .login-section {
+        min-height: auto;
+
+        padding-top: 60px;
+    }
+
+    .login-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+    .login-info {
+        text-align: center;
+
+        padding: 10px;
+    }
+
+    .info-description {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .login-features {
+        max-width: 500px;
+
+        margin: 0 auto;
+
+        text-align: left;
+    }
+
+    .login-info h1 {
+        font-size: 3rem;
+    }
+
+    .login-card {
+        max-width: 500px;
+
+        margin: 0 auto;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767.98px) {
+
+    /* Navbar */
+
+    .main-navbar {
+        min-height: 76px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 19px;
+
+        border-radius: 10px;
+    }
+
+    .store-name {
+        font-size: 20px;
+    }
+
+    .logo-text small {
+        font-size: 10px;
+    }
+
+
+    /* Login */
+
+    .login-section {
+        min-height: auto;
+
+        padding-top: 45px;
+
+        padding-bottom: 50px;
+    }
+
+    .login-wrapper {
+        gap: 25px;
+    }
+
+    .login-info {
+        padding: 0;
+    }
+
+    .welcome-badge {
+        margin-bottom: 17px;
+
+        font-size: 0.74rem;
+    }
+
+    .login-info h1 {
+        font-size: 2.35rem;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 15px;
+    }
+
+    .info-description {
+        font-size: 0.88rem;
+
+        line-height: 1.65;
+
+        margin-bottom: 25px;
+    }
+
+    .login-features {
+        gap: 15px;
+    }
+
+    .feature-icon {
+        width: 43px;
+
+        height: 43px;
+
+        min-width: 43px;
+
+        border-radius: 11px;
+    }
+
+    .feature-item h6 {
+        font-size: 0.87rem;
+    }
+
+    .feature-item p {
+        font-size: 0.76rem;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+
+        border-radius: 18px;
+    }
+
+    .login-header {
+        margin-bottom: 23px;
+    }
+
+    .login-icon {
+        width: 53px;
+
+        height: 53px;
+
+        border-radius: 14px;
+    }
+
+    .login-header h2 {
+        font-size: 1.45rem;
+    }
+
+    .input-wrapper input {
+        height: 48px;
+
+        font-size: 0.84rem;
+    }
+
+    .signin-btn {
+        height: 49px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 10px;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+
+    .logo-icon {
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 17px;
+    }
+
+    .store-name {
+        font-size: 18px;
+    }
+
+    .logo-text small {
+        font-size: 9px;
+    }
+
+    .login-section {
+        padding-left: 8px;
+
+        padding-right: 8px;
+    }
+
+    .login-info h1 {
+        font-size: 2.05rem;
+    }
+
+    .login-card {
+        padding: 22px 16px;
+    }
+
+    .password-label {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+    .footer-links {
+        gap: 14px;
+    }
+}
+
